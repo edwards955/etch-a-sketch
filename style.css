@@ -3,14 +3,23 @@
     flex-direction: column;
     width: 960px;
     height: 960px;
+    margin: 10px auto;
 }
 
 .row {
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 auto;
 }
 
 .cell {
-    flex: 1;
+    flex: 1 1 auto;
     border: 1px solid black;
+}
+
+body {
+    text-align: center;
+}
+
+button {
+    margin: 10px auto;
 }

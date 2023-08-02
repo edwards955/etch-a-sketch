@@ -22,6 +22,10 @@ function createGrid(num) {
 
 function resetGrid() {
     let squaresPerSide = parseInt(prompt('Enter the number of squares per side', 4));
+    if (squaresPerSide > 100) {
+        alert('Please enter a value less than or equal to 100');
+        return;
+    }
     removeChildren(container);
     createGrid(squaresPerSide); 
 }
