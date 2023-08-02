@@ -1,4 +1,7 @@
 const container = document.querySelector('#container');
+const resetButton = document.querySelector('#reset')
+resetButton.addEventListener('click', resetGrid);
+
 createGrid(4);
 
 function createGrid(num) {
@@ -14,5 +17,17 @@ function createGrid(num) {
             row.appendChild(cell);
         }
         container.appendChild(row);
+    }
+}
+
+function resetGrid() {
+    let squaresPerSide = parseInt(prompt('Enter the number of squares per side', 4));
+    removeChildren(container);
+    createGrid(squaresPerSide); 
+}
+
+function removeChildren(node) {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild);
     }
 }
